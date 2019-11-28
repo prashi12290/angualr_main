@@ -10,23 +10,23 @@ export class DataService {
   constructor(private helper:HttpClient) { }
 
   select(){
-    return this.helper.get("http://13.127.80.232/emps");
+    return this.helper.get("http://localhost:9898/emps");
   }
 
   selectByNo(No){
-    return this.helper.get("http://13.127.80.232/emps/" + No);
+    return this.helper.get("http://localhost:9898/emps/" + No);
   }
  
   Update(empObj){
-    return this.helper.put("http://13.127.80.232/emps/"+empObj.No,empObj);
+    return this.helper.put("http://localhost:9898/emps/"+empObj.No,empObj);
   }
 
   Delete(No){
-    return this.helper.delete("http://13.127.80.232/emps/" + No);
+    return this.helper.delete("http://localhost:9898/emps/" + No);
   }
 
   Insert(empObj){
-    return this.helper.post("http://13.127.80.232/emps",empObj);
+    return this.helper.post("http://localhost:9898/emps",empObj);
   }
   
 }
